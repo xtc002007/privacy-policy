@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Digest: AI阅读与语音朗读</title>
+    <style>
+        :root {
+            --primary-color: #1A73E8;
+            --text-color: #202124;
+            --bg-color: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --border-color: #DADCE0;
+            --secondary-text: #5F6368;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 36px 48px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+        }
+        .header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 26px;
+        }
+        h2 {
+            color: #1a73e8;
+            border-bottom: 1px solid #e8eaed;
+            padding-bottom: 8px;
+            margin-top: 28px;
+            font-size: 20px;
+        }
+        h3 {
+            color: #3c4043;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #3c4043;
+        }
+        ul {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .meta-box {
+            background-color: #E8F0FE;
+            border-left: 4px solid var(--primary-color);
+            padding: 14px 18px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .meta-box p {
+            margin: 4px 0;
+            color: #1967D2;
+        }
+        .highlight-box {
+            background-color: #F1F3F4;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        .lang-switch a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 10px;
+            padding: 4px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: #fff;
+        }
+        .lang-switch a:hover {
+            background: #f1f3f4;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--secondary-text);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lang-switch">
+        <a href="#english">English</a>
+        <a href="#chinese">中文版</a>
+    </div>
+
+    <!-- CHINESE SECTION -->
+    <div id="chinese">
+        <div class="header">
+            <h1>隐私权政策 (Privacy Policy)</h1>
+            <p><strong>应用名称：</strong>Digest: AI阅读与语音朗读 (Digest: AI Reader & TTS Audio)</p>
+            <p><strong>开发者：</strong>徐天长 (Tianchang Xu) | <strong>联系邮箱：</strong><a href="mailto:xtc002007@gmail.com">xtc002007@gmail.com</a></p>
+            <p><strong>生效日期：</strong>2026年10月23日 | <strong>最近更新：</strong>2026年11月4日</p>
+        </div>
+
+        <div class="meta-box">
+            <p><strong>核心承诺：</strong>Digest 采用「本地优先（Local-First）」架构，尊重并全力保护您的个人隐私。我们不设立中心化数据收集服务器，不追踪您的阅读习惯，您的文章、摘要、朗读缓存及个人知识图谱默认 100% 留存在您的设备本地。</p>
+        </div>
+
+        <h2>一、我们处理的用户数据与信息</h2>
+        <p>为了实现深度阅读、金字塔式 AI 摘要、离线神经网络朗读以及个人知识库构建功能，Digest 会在经您明确操作后处理以下数据：</p>
+        <ul>
+            <li><strong>用户主动导入的内容：</strong>包括您从外部应用（如微信、浏览器）分享至 Digest 或主动粘贴的文章链接（URL）、正文文本、书签、高亮笔记及批注。</li>
+            <li><strong>剪贴板内容（前台）：</strong>仅当应用处于前台活跃状态时，Digest 会短暂检测剪贴板是否包含文章链接，以便向您弹出“是否保存并提取摘要”的便捷提示。应用绝不在后台监听剪贴板，也不会将剪贴板内容上传或共享。</li>
+            <li><strong>本地语音与音频数据：</strong>由端侧离线神经网络引擎（MeloTTS / Sherpa-ONNX）在设备端生成的语音片段，全部存储于本地应用沙盒内，仅用于后台听读与播放控制。</li>
+            <li><strong>用户自定义 API 密钥（可选）：</strong>若您选择开启云端大模型摘要模式并配置自己的 DeepSeek、OpenAI 或 Gemini API Key，该密钥将加密存储在设备本地的私有存储空间中。</li>
+        </ul>
+
+        <h2>二、安全数据处理程序与技术措施 (Secure Data Handling Procedures)</h2>
+        <p>为符合 Google Play 用户数据政策及全球隐私安全标准，我们实施了严格的技术与管理措施以保障用户数据安全：</p>
+        <ul>
+            <li><strong>端侧私有沙盒存储（Data at Rest）：</strong>所有文章数据、阅读记录、SQLite 数据库文件及离线语音模型均存放在 Android 操作系统为 Digest 分配的专属私有沙盒目录（<code>/data/data/com.xtc.digest/</code>）。Android 系统的 Linux UID/GID 权限机制确保任何其他第三方应用程序均无法访问此数据。</li>
+            <li><strong>高强度传输加密（Data in Transit）：</strong>当 Digest 抓取您指定的网页内容、下载离线语音模型包，或在您配置自定义 API 后调用大模型服务时，所有网络请求必须且仅通过标准的 <strong>HTTPS / TLS 1.2 或 TLS 1.3</strong> 加密协议进行安全传输，彻底杜绝中间人拦截或窃听。</li>
+            <li><strong>无自建中心化数据收集服务器：</strong>Digest 开发者不架设任何用于存储用户个人资料、阅读记录或身份凭证的中心化云端服务器。我们不会采集您的设备标识符（如 IMEI、Android ID、Advertising ID）、地理位置或通讯录。</li>
+            <li><strong>私有 WebDAV 加密备份：</strong>若您启用备份与同步功能，数据包会直接加密并推送到您所拥有的私有 WebDAV 服务器上。开发者无权也无法获取您的备份数据或凭证。</li>
+        </ul>
+
+        <h2>三、数据保留、删除与用户控制权 (Data Retention & Deletion)</h2>
+        <ul>
+            <li><strong>单篇内容即时删除：</strong>您可在应用中随时滑动或点击删除任何单篇文章、摘要、批注或播放缓存，相关记录将在本地 SQLite 数据库中被立即、永久抹除。</li>
+            <li><strong>全量数据一键清除：</strong>您可以在应用内的「设置 -> 清除所有数据」中随时彻底清空本地数据库与全部音频缓存；亦可通过系统「设置 -> 应用管理 -> Digest -> 清除存储空间」实现彻底清除。</li>
+            <li><strong>卸载彻底销毁：</strong>当您在设备上卸载 Digest 时，Android 系统会自动从物理存储中彻底销毁应用沙盒内的全部数据，包括文章库、知识图谱、缓存模型及配置文件，不留任何数据残留。</li>
+        </ul>
+
+        <h2>四、第三方服务与数据共享政策</h2>
+        <ul>
+            <li><strong>零出售、零出租：</strong>我们坚决不出售、出租、转让或共享任何用户数据给广告商、数据经纪人或商业机构。</li>
+            <li><strong>零追踪与广告 SDK：</strong>Digest 内部不集成任何第三方广告 SDK（如 AdMob）或商业用户行为追踪工具（如 Firebase Analytics、AppsFlyer）。</li>
+            <li><strong>不使用用户数据训练公共模型：</strong>您的阅读内容与个人笔记绝对不会被用于训练公共 AI 基础模型。</li>
+            <li><strong>第三方大模型 API 调用（用户可选）：</strong>当且仅当您主动配置自己的大模型 API Key（如 DeepSeek）时，文章正文会直连发送至对应服务商以生成摘要。该过程遵循您与该服务商之间的服务协议。</li>
+        </ul>
+
+        <h2>五、Android 系统权限使用说明</h2>
+        <ul>
+            <li><code>android.permission.INTERNET</code>：用于在您主动保存文章时抓取网页公开正文，以及下载离线语音模型包。</li>
+            <li><code>android.permission.FOREGROUND_SERVICE</code> & <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>：用于在您听读文章时，支持后台连续播放语音及系统锁屏媒体控制通知。</li>
+            <li><code>android.permission.WAKE_LOCK</code>：用于在屏幕熄灭时保持语音朗读服务正常运行，防止系统意外中断播放。</li>
+            <li><code>android.permission.POST_NOTIFICATIONS</code>：用于展示正在朗读的媒体播放器通知卡片（包含播放、暂停、进度调节按钮）。</li>
+        </ul>
+
+        <h2>六、儿童隐私保护</h2>
+        <p>Digest 专为 18 岁及以上具备深度阅读与学习需求的用户设计。我们绝不会有意收集或索取 13 岁以下（在欧盟为 16 岁以下）儿童的任何个人信息。</p>
+
+        <h2>七、隐私政策更新与联系方式</h2>
+        <p>我们可能会根据相关法律法规或功能改进适时更新本隐私政策。更新内容将在此页面及时公布。</p>
+        <p>如果您对本隐私政策或安全数据处理程序有任何疑问、意见或数据删除请求，请通过以下方式联系开发者：</p>
+        <p><strong>开发者邮箱：</strong><a href="mailto:xtc002007@gmail.com">xtc002007@gmail.com</a></p>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 2px dashed #dadce0;">
+
+    <!-- ENGLISH SECTION -->
+    <div id="english">
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <p><strong>Application Name:</strong> Digest: AI Reader & TTS Audio (Digest: AI阅读与语音朗读)</p>
+            <p><strong>Package Name:</strong> <code>com.xtc.digest</code></p>
+            <p><strong>Developer:</strong> Tianchang Xu (徐天长) | <strong>Email:</strong> <a href="mailto:xtc002007@gmail.com">xtc002007@gmail.com</a></p>
+            <p><strong>Effective Date:</strong> October 23, 2026 | <strong>Last Updated:</strong> November 4, 2026</p>
+        </div>
+
+        <div class="meta-box">
+            <p><strong>Our Core Commitment:</strong> Digest is built with a strictly <strong>Local-First</strong> architectural philosophy. We do not operate proprietary cloud servers to collect user analytics or store reading history. Your articles, AI summaries, neural TTS cache, and personal knowledge graphs remain 100% locally on your device by default.</p>
+        </div>
+
+        <h2>1. User Data We Collect and Process</h2>
+        <p>To deliver deep reading, multi-level pyramid AI summaries, neural speech synthesis, and personal knowledge management, Digest processes the following data solely based on your explicit actions:</p>
+        <ul>
+            <li><strong>User-Supplied Content:</strong> URLs, article text, reading highlights, notes, and topic tags that you explicitly share or paste into Digest.</li>
+            <li><strong>Clipboard Data (Foreground Only):</strong> When Digest is in the active foreground, it inspects clipboard text strictly to detect URLs or reading snippets you may want to import. Digest never monitors clipboard data in the background, nor does it transmit or save your clipboard contents to remote endpoints.</li>
+            <li><strong>Audio and Voice Cache:</strong> Synthesized speech audio generated locally on-device by neural TTS engines (MeloTTS / Sherpa-ONNX) is stored in the local application sandbox for playback and lock-screen listening.</li>
+            <li><strong>Custom API Keys (Optional):</strong> If you configure custom LLM API keys (such as DeepSeek, OpenAI, or Gemini), they are encrypted and retained strictly inside local private device storage.</li>
+        </ul>
+
+        <h2>2. Secure Data Handling Procedures</h2>
+        <p>To safeguard user privacy and fulfill Google Play's User Data Policy requirements, Digest implements comprehensive technical security procedures:</p>
+        <ul>
+            <li><strong>Data at Rest & Sandboxed Storage:</strong> All user records, notes, SQLite database files, and downloaded TTS voice packages are stored exclusively within Android's private app sandbox (<code>/data/data/com.xtc.digest/</code>). Android’s kernel-level UID/GID separation prevents other applications on your device from accessing or reading Digest’s data.</li>
+            <li><strong>Data in Transit & Robust Encryption:</strong> Whenever Digest communicates with the internet (fetching user-requested public web articles, downloading offline voice models, or sending summarization prompts using your private API key), all network transmissions are strictly conducted over encrypted <strong>HTTPS using TLS 1.2 or TLS 1.3</strong> to prevent eavesdropping and interception.</li>
+            <li><strong>No Centralized Tracking Servers:</strong> We do not operate backend servers that aggregate user profiles, device identifiers (IMEI, Android ID, Advertising ID), locations, or reading behaviors.</li>
+            <li><strong>Private WebDAV Backup:</strong> Optional backup and synchronization operations connect directly to your own self-hosted WebDAV server over encrypted channels. We never intercept, store, or have access to your credentials or backup archives.</li>
+        </ul>
+
+        <h2>3. Data Retention and Deletion Policy</h2>
+        <ul>
+            <li><strong>Immediate Local Deletion:</strong> You can delete any individual article, summary, note, or audio segment at any time within the app. Deleted items are permanently purged from the local SQLite database.</li>
+            <li><strong>Full Data Wipe:</strong> You can wipe all stored data at any time via Digest Settings -> "Clear All Data", or through Android System Settings -> Apps -> Digest -> Storage -> "Clear Storage".</li>
+            <li><strong>Permanent Uninstall Deletion:</strong> When Digest is uninstalled from your device, the Android operating system completely and permanently removes the entire application sandbox and all local data files without residual traces.</li>
+        </ul>
+
+        <h2>4. Data Sharing and Third-Party Disclosures</h2>
+        <ul>
+            <li><strong>No Sale of Data:</strong> We never sell, rent, monetize, or lease your personal information or reading data to third parties, brokers, or advertisers.</li>
+            <li><strong>No Tracking SDKs:</strong> Digest contains zero third-party advertising SDKs (e.g. AdMob) and zero analytics tracking SDKs (e.g. Firebase Analytics, AppsFlyer).</li>
+            <li><strong>No AI Model Training on User Data:</strong> Your reading materials, highlights, and notes are never used to train public or proprietary AI models.</li>
+            <li><strong>Third-Party Cloud AI Providers (User-Initiated):</strong> Only if you configure your own third-party API key (such as DeepSeek), article texts are sent directly from your device to the API provider to generate summaries in accordance with your agreement with that provider.</li>
+        </ul>
+
+        <h2>5. Android System Permissions Specification</h2>
+        <ul>
+            <li><code>android.permission.INTERNET</code>: Required solely to fetch web page content that you explicitly choose to import, and to download offline TTS voice models.</li>
+            <li><code>android.permission.FOREGROUND_SERVICE</code> & <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Required to provide uninterrupted background audio playback and system media session controls while the screen is off or app is minimized.</li>
+            <li><code>android.permission.WAKE_LOCK</code>: Required to keep the audio playback engine running smoothly during screen-off reading.</li>
+            <li><code>android.permission.POST_NOTIFICATIONS</code>: Required to display the playback notification controller with play/pause/skip actions.</li>
+        </ul>
+
+        <h2>6. Children's Privacy</h2>
+        <p>Digest is directed to a general audience aged 18 and older who engage in professional and academic reading. We do not knowingly collect personal information from children under the age of 13 (or under 16 in the European Union).</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions, feedback, or requests regarding this Privacy Policy or our secure data handling procedures, please reach out to the developer directly:</p>
+        <p><strong>Developer Email:</strong> <a href="mailto:xtc002007@gmail.com">xtc002007@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Digest (Tianchang Xu). All rights reserved.</p>
+    </div>
+</div>
+
+</body>
+</html>

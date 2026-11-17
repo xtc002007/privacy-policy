@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Mindock</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --border: #334155;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    h1, h2, h3 { color: #ffffff; }
+    h1 { border-bottom: 2px solid var(--primary); padding-bottom: 12px; margin-top: 0; font-size: 2rem; }
+    h2 { margin-top: 32px; color: var(--primary); font-size: 1.3rem; }
+    p, li { color: var(--text-muted); }
+    ul { padding-left: 20px; }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .highlight-box {
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Google Play Compliance Standard</div>
+    <h1>Mindock Privacy Policy</h1>
+    <p><em>Effective Date: November 17, 2026</em></p>
+
+    <div class="highlight-box">
+      <strong>Core Privacy Commitment:</strong> Mindock is architected on a <strong>Local-First, Privacy-by-Default</strong> principle. Your private knowledge, personal notes, recordings, and media files reside in your local encrypted storage (SQLCipher / Hardware Keystore) and are never sold, rented, or monetized for advertising.
+    </div>
+
+    <h2>1. Information We Collect and How We Use It</h2>
+    <ul>
+      <li><strong>Local Content & Documents:</strong> Text notes, imported images, audio voice memos, and PDFs. These are stored locally in your device's hardware-backed encrypted vault.</li>
+      <li><strong>Account Credentials (Optional):</strong> If you choose to register for cloud synchronization and multi-device collaboration, we collect your email address and an encrypted password hash.</li>
+      <li><strong>Google Play In-App Purchase Data:</strong> Order tokens and subscription status processed securely via the Google Play Billing Library to credit tokens and activate Pro memberships. We do not store or process payment card details.</li>
+    </ul>
+
+    <h2>2. Permissions and Their Contextual Usage</h2>
+    <p>Mindock strictly adheres to the principle of least privilege. We only request runtime permissions when contextually required by you:</p>
+    <ul>
+      <li><strong>Camera (Optional):</strong> Only requested when you tap the camera action to scan physical documents, capture whiteboard notes, or snap reference photos.</li>
+      <li><strong>Microphone (Optional):</strong> Only requested when you tap the record button to capture voice memos. Transcriptions are processed either via on-device Whisper or privacy-redacted routing based on your explicit policy choice.</li>
+      <li><strong>Photo Picker & Storage:</strong> Mindock adopts Android's modern <strong>Photo Picker</strong> (SAF), meaning Mindock NEVER requests broad storage permissions (such as READ_EXTERNAL_STORAGE). The app can only access the explicit files and images you select.</li>
+      <li><strong>Notifications (Optional, Android 13+):</strong> Used solely to alert you when background OCR or batch media indexing tasks finish.</li>
+    </ul>
+
+    <h2>3. Generative AI and Third-Party LLM Policy</h2>
+    <p>Mindock allows you to connect to local on-device models, self-hosted gateways, or cloud LLM APIs (such as DeepSeek):</p>
+    <ul>
+      <li>No private content is sent to third-party AI services without your explicit knowledge policy (e.g., P0/P1 privacy tiers guarantee local-only processing).</li>
+      <li>When cloud enrichment is chosen, data is sanitized via the local Privacy Gate.</li>
+      <li>In-app reporting mechanisms are provided on all AI messages to flag improper or inaccurate content immediately.</li>
+    </ul>
+
+    <h2>4. Data Retention, Security, and Encryption</h2>
+    <ul>
+      <li><strong>Encrypted in Transit:</strong> All communication between Mindock and the gateway uses industry-standard TLS 1.3 / HTTPS encryption. Plaintext HTTP traffic is strictly prohibited.</li>
+      <li><strong>Encrypted at Rest:</strong> Local databases are encrypted using SQLCipher with AES-256 keys generated and protected by the Android Keystore hardware security module.</li>
+      <li><strong>Auto Backup Exclusion:</strong> Authentication tokens and private encryption master keys are explicitly excluded from Android cloud backups to prevent unauthorized extraction.</li>
+    </ul>
+
+    <h2>5. Account & Data Deletion Rights</h2>
+    <p>Under Google Play user data policies and international privacy laws (GDPR, CCPA), you have the absolute right to delete your account and all associated data at any time:</p>
+    <ul>
+      <li><strong>In-App Deletion:</strong> Go to <em>Settings &gt; Account Management &gt; Delete Account</em>. Confirming deletion will instantly wipe your account, profile, and server-side subscription ledgers.</li>
+      <li><strong>Web Deletion Portal:</strong> If you have uninstalled the app or cannot access your device, you can submit a deletion request via our dedicated Web Portal: <a href="DeleteAccount.html" target="_blank">Account Deletion Portal</a>.</li>
+    </ul>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact our Data Protection Officer at:</p>
+    <p><strong>Email:</strong> <a href="mailto:privacy@mindock.app">privacy@mindock.app</a></p>
+
+    <footer>
+      &copy; 2026 Mindock Inc. All Rights Reserved.
+    </footer>
+  </div>
+</body>
+</html>

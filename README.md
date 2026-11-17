@@ -1,4 +1,4 @@
-# Application Privacy Policies
+﻿# Application Privacy Policies
 
 Official privacy policies for mobile applications developed by Tianchang Xu:
 
@@ -6,3 +6,5 @@ Official privacy policies for mobile applications developed by Tianchang Xu:
 - **Alembic**: [Privacy Policy](Alembic/) | [Account Deletion](Alembic/DeleteAccount.html)
 - **InstantTutor**: [Data Deletion](InstantTutor/DeleteAccount.html)
 - **LittleHero**: [Privacy Policy](index.html)
+
+- **Mindock: Personal Memory & AI**: [Privacy Policy](Mindock/) | [Account Deletion](Mindock/DeleteAccount.html)

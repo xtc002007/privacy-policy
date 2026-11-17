@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Account and Data Deletion - Mindock</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --danger: #ef4444;
+      --border: #334155;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    h1 { color: #ffffff; margin-top: 0; font-size: 1.8rem; border-bottom: 2px solid var(--danger); padding-bottom: 12px; }
+    h2 { font-size: 1.2rem; color: #ffffff; margin-top: 24px; }
+    p, li { color: var(--text-muted); }
+    .alert-danger {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid var(--danger);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      color: #fca5a5;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0f172a;
+      color: #fff;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    button.btn-danger {
+      background-color: var(--danger);
+      color: #fff;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+    button.btn-danger:hover {
+      background-color: #dc2626;
+    }
+    .status-msg {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      display: none;
+    }
+    .status-success {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid #22c55e;
+      color: #86efac;
+    }
+    .status-error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid #ef4444;
+      color: #fca5a5;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+    a { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mindock Account &amp; Data Deletion Request</h1>
+    <p><em>In compliance with Google Play User Data Policy &amp; GDPR Right to Erasure</em></p>
+
+    <div class="alert-danger">
+      <strong>Warning:</strong> Deleting your account is <strong>permanent and irreversible</strong>. Once deleted, all your cloud synchronization backups, profile metadata, purchased subscription rights, and remaining token balances will be permanently expunged from Mindock servers.
+    </div>
+
+    <h2>Data That Will Be Permanently Deleted</h2>
+    <ul>
+      <li>User Account Profile (Email address, unique user ID, display settings).</li>
+      <li>Cloud sync metadata and remote snapshots.</li>
+      <li>Purchased token balances and subscription entitlements.</li>
+      <li>Audit logs associated with your account.</li>
+    </ul>
+
+    <h2>Data Stored Locally on Your Device</h2>
+    <p>Mindock operates on a <em>Local-First</em> architecture. If you still have the Mindock app installed, your local database (SQLCipher) and notes remain on your phone until you clear application storage or uninstall the application.</p>
+
+    <h2>Online Deletion Request Form</h2>
+    <p>Enter your registered account credentials to submit an immediate erasure request:</p>
+
+    <form id="deletionForm">
+      <div class="form-group">
+        <label for="email">Account Email Address:</label>
+        <input type="email" id="email" required placeholder="you@example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Account Password:</label>
+        <input type="password" id="password" required placeholder="Enter your password to confirm identity" />
+      </div>
+
+      <button type="submit" class="btn-danger" id="submitBtn">Permanently Delete My Account &amp; Data</button>
+      <div id="statusMsg" class="status-msg"></div>
+    </form>
+
+    <h2>Alternative: In-App Deletion</h2>
+    <p>If you have access to the Mindock mobile app, you can delete your account directly:</p>
+    <ol>
+      <li>Open Mindock &gt; Navigate to <strong>Settings</strong>.</li>
+      <li>Scroll to the <strong>Account &amp; Subscription</strong> section.</li>
+      <li>Tap <strong>Delete Account (注销账号)</strong> and confirm the prompt.</li>
+    </ol>
+
+    <footer>
+      &copy; 2026 Mindock Inc. &middot; <a href="index.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a>
+    </footer>
+  </div>
+
+  <script>
+    const form = document.getElementById('deletionForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusMsg = document.getElementById('statusMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      if (!confirm("Are you absolutely sure you want to permanently delete your account and all associated cloud data? This action CANNOT be undone.")) {
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Processing deletion...";
+      statusMsg.style.display = 'none';
+
+      try {
+        // Step 1: Login to get ephemeral token
+        const loginRes = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+        const loginData = await loginRes.json();
+
+        if (!loginRes.ok || !loginData.token) {
+          throw new Error(loginData.message || "Failed to verify account credentials. Please check your email and password.");
+        }
+
+        // Step 2: Call Delete Account API
+        const deleteRes = await fetch('/api/user/account', {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + loginData.token
+          }
+        });
+        const deleteData = await deleteRes.json();
+
+        if (deleteRes.ok && deleteData.success) {
+          statusMsg.className = 'status-msg status-success';
+          statusMsg.innerText = "Your account and all associated cloud data have been permanently deleted from Mindock servers. You may now uninstall the app.";
+          statusMsg.style.display = 'block';
+          form.reset();
+        } else {
+          throw new Error(deleteData.message || "Deletion request failed on server.");
+        }
+      } catch (err) {
+        statusMsg.className = 'status-msg status-error';
+        statusMsg.innerText = "Error: " + err.message;
+        statusMsg.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Permanently Delete My Account & Data";
+      }
+    });
+  </script>
+</body>
+</html>
